@@ -25,7 +25,7 @@
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li ng-click=""><a href="#" class="glyphicon glyphicon-pencil"> Submit Post<span class="sr-only">(current)</span></a></li>
+	        <li ng-click="showForm()"><a href="#" class="glyphicon glyphicon-pencil"> Submit Post<span class="sr-only">(current)</span></a></li>
 	      <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" ng-model="query" placeholder="Search">
@@ -44,7 +44,7 @@
 	  </div>
 	</nav>
 
-	<form>
+	<form ng-show="submitFormVisible">
 		<div class="form-group">
 			<label for="Title"><b>Title</b></label>
 		  <input type="text" class="form-control" id="Title" ng-model="post.title" placeholder="Title">

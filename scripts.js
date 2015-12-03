@@ -1,6 +1,10 @@
 angular.module('redditClone', ['angularMoment'])
 	.controller('RedditController', function($scope) {
 		$scope.articles = [];
+		$scope.submitFormVisible = false;
+		$scope.showForm = function() {
+			$scope.submitFormVisible = (!$scope.submitFormVisible) ? true : false;
+		};
 		$scope.submit = function() {
 			$scope.article = $scope.post;
 			$scope.article.isCommentFormVisible = false;
